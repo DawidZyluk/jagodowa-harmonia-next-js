@@ -1,0 +1,51 @@
+.section {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cooperationList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cooperationItem {
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  :global(h3) {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .itemSubtitle {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #666;
+  }
+
+  :global(p) {
+    line-height: 1.6;
+  }
+}
+
