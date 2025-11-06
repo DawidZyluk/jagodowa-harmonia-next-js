@@ -1,28 +1,29 @@
-import styles from "./CooperationFormsSection.module.scss";
+import classNames from "classnames";
+import "./CooperationFormsSection.scss";
 
 export default function CooperationFormsSection() {
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Formy współpracy</h2>
-        <p className={styles.subtitle}>Wybierz opcję dopasowaną do Twoich celów zdrowotnych.</p>
+    <section className={classNames("cooperation-forms-section")}>
+      <div className={classNames("cooperation-forms-section__container")}>
+        <h2 className={classNames("cooperation-forms-section__title")}>Formy współpracy</h2>
+        <p className={classNames("cooperation-forms-section__subtitle")}>Wybierz opcję dopasowaną do Twoich celów zdrowotnych.</p>
         
-        <div className={styles.cooperationList}>
-          <div className={styles.cooperationItem}>
+        <div className={classNames("cooperation-forms-section__list")}>
+          <div className={classNames("cooperation-forms-section__item")}>
             <h3>Spotkanie online lub stacjonarne z dietetykiem</h3>
-            <p className={styles.itemSubtitle}>Online lub stacjonarnie</p>
+            <p className={classNames("cooperation-forms-section__item-subtitle")}>Online lub stacjonarnie</p>
             <p>Możesz wybrać formę współpracy, która najbardziej Ci odpowiada – zdalnie przez internet lub podczas spotkań twarzą w twarz. Dzięki temu dostosujemy sposób kontaktu do Twojego trybu życia i wygody, zapewniając jednocześnie pełne wsparcie.</p>
           </div>
           
-          <div className={styles.cooperationItem}>
+          <div className={classNames("cooperation-forms-section__item")}>
             <h3>Diet coaching, wizyty kontrolne - wsparcie i motywacja do zdrowych nawyków</h3>
-            <p className={styles.itemSubtitle}>Diet coaching</p>
+            <p className={classNames("cooperation-forms-section__item-subtitle")}>Diet coaching</p>
             <p>Diet coach to wsparcie na co dzień, które pomaga w utrzymaniu motywacji i wprowadzaniu zdrowych nawyków żywieniowych. Razem wypracujemy plan działania, który będzie realny do realizacji i dostosowany do Twojego stylu życia.</p>
           </div>
           
-          <div className={styles.cooperationItem}>
+          <div className={classNames("cooperation-forms-section__item")}>
             <h3>Jednorazowa konsultacja dietetyczna - szybka porada żywieniowa</h3>
-            <p className={styles.itemSubtitle}>Jednorazowa konsultacja dietetyczna</p>
+            <p className={classNames("cooperation-forms-section__item-subtitle")}>Jednorazowa konsultacja dietetyczna</p>
             <p>Jeśli potrzebujesz szybkiej porady lub wskazówek dotyczących diety, jednorazowa konsultacja będzie idealnym rozwiązaniem. Otrzymasz indywidualne zalecenia, które pomogą Ci lepiej zrozumieć swoje potrzeby żywieniowe i podjąć świadome decyzje.</p>
           </div>
         </div>
@@ -30,4 +31,3 @@ export default function CooperationFormsSection() {
     </section>
   );
 }
-

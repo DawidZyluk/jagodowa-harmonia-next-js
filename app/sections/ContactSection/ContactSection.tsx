@@ -1,21 +1,21 @@
-import styles from "./ContactSection.module.scss";
+import classNames from "classnames";
+import "./ContactSection.scss";
 
 export default function ContactSection() {
   return (
-    <section className={styles.section}>
-      <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>Kontakt</h2>
-        <p className={styles.subtitle}>Masz pytania lub chcesz umówić wizytę? Napisz lub zadzwoń.</p>
+    <section className={classNames("contact-section")}>
+      <div className={classNames("contact-section__container")}>
+        <h2 className={classNames("contact-section__title")}>Kontakt</h2>
+        <p className={classNames("contact-section__subtitle")}>Masz pytania lub chcesz umówić wizytę? Napisz lub zadzwoń.</p>
         
-        <div className={styles.contactInfo}>
-          <button className={styles.button}>Umów się online</button>
+        <div className={classNames("contact-section__info")}>
+          <button className={classNames("contact-section__button")}>Umów się online</button>
           <p>Telefon</p>
-          <p className={styles.contactValue}>+48 789 162 740</p>
+          <p className={classNames("contact-section__value")}>+48 789 162 740</p>
           <p>Gabinet</p>
-          <p className={styles.contactValue}>al. Solidarności 117</p>
+          <p className={classNames("contact-section__value")}>al. Solidarności 117</p>
         </div>
       </div>
     </section>
   );
 }
-

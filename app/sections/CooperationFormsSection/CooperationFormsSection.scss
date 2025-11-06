@@ -1,45 +1,50 @@
-.section {
+.cooperation-forms-section {
   width: 100%;
   padding: 4rem 0;
 }
 
-.container {
+.cooperation-forms-section__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.sectionTitle {
+.cooperation-forms-section__title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.subtitle {
+.cooperation-forms-section__subtitle {
   text-align: center;
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
-.servicesList {
+.cooperation-forms-section__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.serviceItem {
+.cooperation-forms-section__item {
   padding: 2rem;
   border: 1px solid #ddd;
   border-radius: 8px;
 
-  :global(h3) {
+  h3 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
   }
-
-  :global(p) {
-    line-height: 1.6;
-  }
 }
 
+.cooperation-forms-section__item-subtitle {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.cooperation-forms-section__item p {
+  line-height: 1.6;
+}

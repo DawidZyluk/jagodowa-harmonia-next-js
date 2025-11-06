@@ -1,27 +1,27 @@
-.section {
+.about-section {
   width: 100%;
   padding: 4rem 0;
 }
 
-.container {
+.about-section__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-.sectionTitle {
+.about-section__title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.paragraph {
+.about-section__paragraph {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
-.button {
+.about-section__button {
   display: block;
   margin: 2rem auto 0;
   padding: 1rem 2rem;
@@ -37,4 +37,3 @@
     background-color: #555;
   }
 }
-
