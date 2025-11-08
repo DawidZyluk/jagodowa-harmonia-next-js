@@ -54,6 +54,7 @@
     z-index: 4;
     text-align: left;
     margin-left: auto;
+    background-color: var(--page-background);
   }
 
   &__title {
@@ -126,6 +127,7 @@
     margin-top: -250px;
     z-index: 4;
     padding: 3rem 1.5rem 4rem;
+    background-color: #FAF6FF;
    
   }
 }
