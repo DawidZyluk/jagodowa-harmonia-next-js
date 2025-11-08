@@ -21,6 +21,12 @@
     
   }
 
+  &--menu-open {
+    background-color: rgba(21, 28, 36, 0.95);
+    color: #f7f9fb;
+    box-shadow: none;
+  }
+
   &__container {
     margin: 0 50px;
     padding: 0.5rem 1.5rem;

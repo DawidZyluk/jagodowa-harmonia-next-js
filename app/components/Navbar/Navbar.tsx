@@ -44,28 +44,25 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsSolid(window.scrollY > 60);
-      if (window.scrollY > 60 && isMenuOpen) {
-        setIsMenuOpen(false);
-      }
     };
 
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMenuOpen]);
+  }, []);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
+useEffect(() => {
+  if (typeof window === "undefined") return;
 
-    const handleResize = () => {
-      if (window.innerWidth >= 1100 && isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-    };
+  const handleResize = () => {
+    if (window.innerWidth >= 1100) {
+      setIsMenuOpen(false);
+    }
+  };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isMenuOpen]);
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   return (
     <>
