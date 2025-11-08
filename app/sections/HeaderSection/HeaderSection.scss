@@ -85,7 +85,6 @@
     
     &__background {
       background-position: 10% center;
-      height: 100%;
     }
 
     &__foreground {
@@ -108,6 +107,7 @@
 
     &__background {
       height: 100%;
+      background-position: 0% center;
     }
 
     &__foreground {
@@ -127,5 +127,13 @@
     z-index: 4;
     padding: 3rem 1.5rem 4rem;
    
+  }
+}
+
+@media (max-width: bp.$breakpoint-sm) {
+  .header-section {
+    &__background {
+      background-position: 10% center;
+    }
   }
 }
