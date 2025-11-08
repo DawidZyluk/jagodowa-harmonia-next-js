@@ -61,7 +61,7 @@ export default function HeaderSection() {
 
   return (
     <>
-      <section className={classNames["header-section"]} ref={ref}>
+      <section className={classNames["header-section"]} ref={ref} id="start">
         <motion.div
           aria-hidden
           className={`${classNames.background} ${

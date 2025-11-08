@@ -3,7 +3,7 @@ import "./ContactSection.scss";
 
 export default function ContactSection() {
   return (
-    <section className={classNames("contact-section")}>
+    <section className={classNames("contact-section")} id="contact">
       <div className={classNames("contact-section__container")}>
         <h2 className={classNames("contact-section__title")}>Kontakt</h2>
         <p className={classNames("contact-section__subtitle")}>Masz pytania lub chcesz umówić wizytę? Napisz lub zadzwoń.</p>

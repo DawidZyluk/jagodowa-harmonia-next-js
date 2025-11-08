@@ -3,7 +3,7 @@ import "./AboutSection.scss";
 
 export default function AboutSection() {
   return (
-    <section className={classNames("about-section")}>
+    <section className={classNames("about-section")} id="about">
       <div className={classNames("about-section__container")}>
         <h2 className={classNames("about-section__title")}>O mnie</h2>
         <p className={classNames("about-section__paragraph")}>
