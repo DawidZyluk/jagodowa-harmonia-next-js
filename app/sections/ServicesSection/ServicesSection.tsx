@@ -3,7 +3,7 @@ import "./ServicesSection.scss";
 
 export default function ServicesSection() {
   return (
-    <section className={classNames("services-section")}>
+    <section className={classNames("services-section")} id="services">
       <div className={classNames("services-section__container")}>
         <h2 className={classNames("services-section__title")}>Usługi dietetyczne</h2>
         <p className={classNames("services-section__subtitle")}>Spotkania online lub w gabinecie w Warszawie.</p>

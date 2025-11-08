@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as bp;
+
 .header-section {
   position: relative;
   width: 100%;
@@ -73,11 +75,16 @@
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: bp.$breakpoint-xl) {
   .header-section {
     &__content {
       width: 40%;
       padding-right: 80px;
+    }
+
+    
+    &__background {
+      background-position: 10% center;
     }
 
     &__foreground {
@@ -87,7 +94,7 @@
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: bp.$breakpoint-md) {
   .header-section {
     flex-direction: column;
     align-items: center;
@@ -99,8 +106,8 @@
     }
 
     &__background {
-      background-position: center left;
       height: 100%;
+      background-position: 0% center;
     }
 
     &__foreground {
@@ -120,5 +127,13 @@
     z-index: 4;
     padding: 3rem 1.5rem 4rem;
    
+  }
+}
+
+@media (max-width: bp.$breakpoint-sm) {
+  .header-section {
+    &__background {
+      background-position: 10% center;
+    }
   }
 }

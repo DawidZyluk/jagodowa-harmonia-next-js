@@ -3,7 +3,7 @@ import "./CooperationFormsSection.scss";
 
 export default function CooperationFormsSection() {
   return (
-    <section className={classNames("cooperation-forms-section")}>
+    <section className={classNames("cooperation-forms-section")} id="cooperation">
       <div className={classNames("cooperation-forms-section__container")}>
         <h2 className={classNames("cooperation-forms-section__title")}>Formy współpracy</h2>
         <p className={classNames("cooperation-forms-section__subtitle")}>Wybierz opcję dopasowaną do Twoich celów zdrowotnych.</p>
