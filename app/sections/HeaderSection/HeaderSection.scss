@@ -58,16 +58,17 @@
   }
 
   &__title {
-    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    font-size: 2.8rem;
     letter-spacing: -0.04em;
     line-height: 1.1;
     font-weight: 700;
   }
 
   &__description {
-    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    font-size: 1.1rem;
     line-height: 1.7;
     font-weight: 400;
+    color: rgba(247, 249, 251, 0.85);
   }
 
   &__content-mobile {
