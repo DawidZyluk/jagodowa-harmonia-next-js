@@ -42,7 +42,7 @@ export default function HeaderSection() {
         src="/foreground.svg"
         alt=""
         className={classNames.foreground}
-        style={{ top: '250px' }}
+        style={{ top: '35vh' }}
       />
       <div className={classNames.overlay} aria-hidden />
 
