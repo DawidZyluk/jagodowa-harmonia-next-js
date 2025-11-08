@@ -43,7 +43,7 @@ export default function HeaderSection() {
     offset: ["start end", "end start"],
   });
 
-  const isDesktop = useMinWidth(1000);
+  const isDesktop = useMinWidth(800);
 
   const classNames = createBemClassNames(
     "header-section",
