@@ -1,5 +1,4 @@
 import HeaderSection from "./sections/HeaderSection/HeaderSection";
-import IntroSection from "./sections/IntroSection/IntroSection";
 import AboutSection from "./sections/AboutSection/AboutSection";
 import CompetenciesSection from "./sections/CompetenciesSection/CompetenciesSection";
 import ServicesSection from "./sections/ServicesSection/ServicesSection";
@@ -11,7 +10,6 @@ export default function Home() {
   return (
     <div>
       <HeaderSection />
-      <IntroSection />
       <AboutSection />
       <CompetenciesSection />
       <ServicesSection />

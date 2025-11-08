@@ -8,9 +8,6 @@
   justify-content: center;
   font-family: var(--font-poppins), sans-serif;
   font-weight: bold;
-  color: #f7f9fb;
-  padding: clamp(4rem, 8vw, 7rem) 0;
-  isolation: isolate;
 
   &__background,
   &__foreground {
@@ -18,7 +15,6 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    will-change: transform;
   }
 
   &__background {
@@ -27,12 +23,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top left;
+
+    &--fixed {
+      background-attachment: fixed;
+    }
   }
 
   &__foreground {
     z-index: 2;
     object-fit: cover;
     pointer-events: none;
+    top: 30vh;
   }
 
   &__overlay {
@@ -42,8 +43,9 @@
   }
 
   &__content {
-    width: min(680px, 90%);
+    width: 50%;
     display: flex;
+    padding-right: 150px;
     flex-direction: column;
     position: relative;
     gap: 24px;
@@ -63,6 +65,56 @@
     font-size: clamp(1rem, 1.2vw, 1.125rem);
     line-height: 1.7;
     font-weight: 400;
-    color: rgba(247, 249, 251, 0.85);
+  }
+
+  &__content-mobile {
+    display: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1350px) {
+  .header-section {
+    &__content {
+      padding-right: 100px;
+    }
+
+    &__foreground {
+      top: 25vh;
+    }
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .header-section {
+    min-height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(3rem, 6vw, 5rem) 0;
+
+    &__content {
+      display: none;
+    }
+
+    &__background {
+      background-position: center left;
+      height: 100%;
+    }
+
+    &__foreground {
+      top: 25vh;
+    }
+  }
+
+  .header-section__content-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem 4rem;
+   
   }
 }
