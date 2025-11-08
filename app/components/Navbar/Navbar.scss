@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as bp;
+
 .navbar {
   position: fixed;
   top: 0;
@@ -28,7 +30,7 @@
     gap: 1.5rem;
     position: relative;
 
-    @media (max-width: 1500px) {
+    @media (max-width: bp.$breakpoint-xxl) {
       margin: 0 20px;
     }
   }
@@ -78,7 +80,7 @@
     list-style: none;
     font-weight: 500;
 
-    @media (max-width: 1500px) {
+    @media (max-width: bp.$breakpoint-xxl) {
       gap: 2rem;
     }
   }
@@ -204,7 +206,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: bp.$breakpoint-lg) {
   .navbar {
     &__container {
       margin: 0 24px;
