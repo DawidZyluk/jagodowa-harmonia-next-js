@@ -129,7 +129,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2.5rem;
-    padding: 2rem;
+    padding: 2rem;  
     padding-top: 0;
   }
 
@@ -226,12 +226,14 @@
     overflow: hidden;
     opacity: 0;
     transition:
-      max-height 0.45s ease,
-      opacity 0.35s ease;
+      max-height 0.4s ease-in-out,
+      opacity 0.3s ease-in-out;
+    will-change: max-height, opacity;
 
     &--open {
-      max-height: 600px;
+      max-height: 800px;
       opacity: 1;
+      overflow: visible;
     }
   }
 }

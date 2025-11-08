@@ -7,7 +7,6 @@ import { HiOutlineChartBar } from "react-icons/hi";
 import { LuBrain, LuLeaf, LuStethoscope } from "react-icons/lu";
 import { RiRunLine } from "react-icons/ri";
 import "./AboutSection.scss";
-import { motion } from "motion/react";
 
 export default function AboutSection() {
   const [activeAccordion, setActiveAccordion] = useState<string | null>(competencyGroups[0].title);
@@ -65,14 +64,10 @@ export default function AboutSection() {
                     <span aria-hidden>{isActive ? "−" : "+"}</span>
                   </button>
 
-                  <motion.div
-                    initial={{ height: 0 }}
-                    animate={{ height: isActive ? "auto" : 0 }}
-                    exit={{ height: 0 }}
+                  <div
                     className={classNames("about-section__accordion-panel", {
                       "about-section__accordion-panel--open": isActive,
                     })}
-                    transition={{ ease: "easeInOut", duration: 0.4 }}
                   >
                     <div className={classNames("about-section__metrics-grid")}>
                       {competencies.map(({ label, Icon }) => (
@@ -84,7 +79,7 @@ export default function AboutSection() {
                         </div>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
               );
             })}
