@@ -1,7 +1,7 @@
 'use client';
 
 import classNames from "classnames";
-import { useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { GiHeartOrgan } from "react-icons/gi";
 import { HiOutlineChartBar } from "react-icons/hi";
 import { LuBrain, LuLeaf, LuStethoscope } from "react-icons/lu";
@@ -64,11 +64,7 @@ export default function AboutSection() {
                     <span aria-hidden>{isActive ? "−" : "+"}</span>
                   </button>
 
-                  <div
-                    className={classNames("about-section__accordion-panel", {
-                      "about-section__accordion-panel--open": isActive,
-                    })}
-                  >
+                  <AccordionPanel isActive={isActive}>
                     <div className={classNames("about-section__metrics-grid")}>
                       {competencies.map(({ label, Icon }) => (
                         <div key={label} className={classNames("about-section__metric-card")}>
@@ -79,7 +75,7 @@ export default function AboutSection() {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </AccordionPanel>
                 </div>
               );
             })}
@@ -119,3 +115,83 @@ const competencyGroups = [
     ],
   },
 ];
+
+type AccordionPanelProps = {
+  isActive: boolean;
+  children: ReactNode;
+};
+
+function AccordionPanel({ isActive, children }: AccordionPanelProps) {
+  const panelRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!panel) {
+      return;
+    }
+
+    if (isActive) {
+      panel.style.height = "auto";
+      panel.style.opacity = "1";
+      panel.style.overflow = "visible";
+    } else {
+      panel.style.height = "0px";
+      panel.style.opacity = "0";
+      panel.style.overflow = "hidden";
+    }
+  }, []);
+
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!panel) {
+      return;
+    }
+
+    const startHeight = `${panel.scrollHeight}px`;
+
+    if (isActive) {
+      panel.style.overflow = "hidden";
+      panel.style.height = startHeight;
+      panel.style.opacity = "1";
+
+      const handleTransitionEnd = (event: TransitionEvent) => {
+        if (event.propertyName !== "height" || panelRef.current !== panel) {
+          return;
+        }
+
+        panel.style.height = "auto";
+        panel.style.overflow = "visible";
+      };
+
+      panel.addEventListener("transitionend", handleTransitionEnd);
+
+      return () => {
+        panel.removeEventListener("transitionend", handleTransitionEnd);
+      };
+    }
+
+    panel.style.overflow = "hidden";
+    panel.style.height = startHeight;
+    panel.style.opacity = "1";
+
+    requestAnimationFrame(() => {
+      if (!panelRef.current) {
+        return;
+      }
+
+      panel.style.height = "0px";
+      panel.style.opacity = "0";
+    });
+  }, [isActive]);
+
+  return (
+    <div
+      ref={panelRef}
+      className={classNames("about-section__accordion-panel", {
+        "about-section__accordion-panel--open": isActive,
+      })}
+    >
+      {children}
+    </div>
+  );
+}
