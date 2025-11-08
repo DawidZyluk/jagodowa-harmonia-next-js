@@ -11,4 +11,23 @@
     font-weight: 500;
     border: none;
     cursor: pointer;
+    position: relative;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(29, 15, 56, 0.35);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 6px 18px rgba(119, 60, 228, 0.25);
+    }
 }
