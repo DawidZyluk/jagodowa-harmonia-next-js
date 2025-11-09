@@ -85,7 +85,7 @@ export default function HeaderSection() {
             Tworzę smaczne i skuteczne plany żywieniowe, które pomagają polepszyć
             wyniki badań, zwiększyć energię i poprawić samopoczucie.
           </p>
-          <Button>Umów wizytę</Button>
+          <Button href="https://jagodowa-harmonia.timego.pl/services">Umów wizytę</Button>
         </div>
       </section>
 
@@ -97,7 +97,7 @@ export default function HeaderSection() {
           Tworzę smaczne i skuteczne plany żywieniowe, które pomagają polepszyć
           wyniki badań, zwiększyć energię i poprawić samopoczucie.
         </p>
-        <Button>Umów wizytę</Button>
+        <Button href="https://jagodowa-harmonia.timego.pl/services">Umów wizytę</Button>
       </section>
     </>
   );
