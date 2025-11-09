@@ -3,10 +3,10 @@
 import Link from "next/link";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import "./Navbar.scss";
+import { socialLinks } from "../../utils/socialLinks";
 
 const navLinks = [
   { href: "#start", label: "Start" },
@@ -14,27 +14,6 @@ const navLinks = [
   { href: "#services", label: "Usługi" },
   { href: "#cooperation", label: "Współpraca" },
   { href: "#contact", label: "Kontakt" },
-];
-
-const socialLinks = [
-  {
-    href: "https://www.facebook.com",
-    label: "Facebook",
-    key: "facebook",
-    Icon: FaFacebookF,
-  },
-  {
-    href: "https://www.instagram.com",
-    label: "Instagram",
-    key: "instagram",
-    Icon: FaInstagram,
-  },
-  {
-    href: "https://www.linkedin.com",
-    label: "LinkedIn",
-    key: "linkedin",
-    Icon: FaLinkedinIn,
-  },
 ];
 
 export default function Navbar() {
