@@ -35,7 +35,7 @@
     z-index: 2;
     object-fit: cover;
     pointer-events: none;
-    top: 30vh;
+    top: 32vh;
   }
 
   &__overlay {
@@ -54,19 +54,21 @@
     z-index: 4;
     text-align: left;
     margin-left: auto;
+    background-color: var(--page-background);
   }
 
   &__title {
-    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    font-size: 2.8rem;
     letter-spacing: -0.04em;
     line-height: 1.1;
     font-weight: 700;
   }
 
   &__description {
-    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    font-size: 1.1rem;
     line-height: 1.7;
     font-weight: 400;
+    color: rgba(247, 249, 251, 0.85);
   }
 
   &__content-mobile {
@@ -123,9 +125,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: -300px;
+    margin-top: -250px;
     z-index: 4;
     padding: 3rem 1.5rem 4rem;
+    background-color: #FAF6FF;
    
   }
 }
