@@ -4,6 +4,7 @@ import ServicesSection from "./sections/ServicesSection/ServicesSection";
 import CooperationFormsSection from "./sections/CooperationFormsSection/CooperationFormsSection";
 import ReviewsSection from "./sections/ReviewsSection/ReviewsSection";
 import ContactSection from "./sections/ContactSection/ContactSection";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CooperationFormsSection />
       <ReviewsSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }
