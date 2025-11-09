@@ -1,6 +1,6 @@
 .button {
     width: fit-content;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #874dec, #9258f8);
@@ -15,6 +15,7 @@
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
+    text-decoration: none;
 
     &:hover,
     &:focus-visible {
