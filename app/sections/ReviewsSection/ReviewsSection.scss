@@ -7,6 +7,16 @@
   min-height: 700px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 750px) {
+    border-bottom-left-radius: 30% 12%;
+    border-bottom-right-radius: 30% 12%;
+  }
+
+  @media (max-width: 480px) {
+    border-bottom-left-radius: 25% 10%;
+    border-bottom-right-radius: 25% 10%;
+  }
 }
 
 .reviews-section__container {

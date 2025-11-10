@@ -43,7 +43,12 @@ export default function HeaderSection() {
     offset: ["start end", "end start"],
   });
 
+  const [mounted, setMounted] = useState(false);
   const isDesktop = useMinWidth(800);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const classNames = createBemClassNames(
     "header-section",
@@ -64,10 +69,8 @@ export default function HeaderSection() {
       <section className={classNames["header-section"]} ref={ref} id="start">
         <motion.div
           aria-hidden
-          className={`${classNames.background} ${
-            isDesktop ? "" : "header-section__background--fixed"
-          }`}
-          style={isDesktop ? { y: backgroundY } : undefined}
+          className={classNames.background}
+          style={mounted && isDesktop ? { y: backgroundY } : undefined}
         />
         <motion.img
           aria-hidden
