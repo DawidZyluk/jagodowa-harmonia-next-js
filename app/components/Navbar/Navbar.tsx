@@ -6,14 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import "./Navbar.scss";
 import { socialLinks } from "../../utils/socialLinks";
-
-const navLinks = [
-  { href: "#start", label: "Start" },
-  { href: "#about", label: "O mnie" },
-  { href: "#services", label: "Usługi" },
-  { href: "#cooperation", label: "Współpraca" },
-  { href: "#contact", label: "Kontakt" },
-];
+import { navLinks } from "./navLinks";
 
 export default function Navbar() {
   const [isSolid, setIsSolid] = useState(false);

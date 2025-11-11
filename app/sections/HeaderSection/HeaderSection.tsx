@@ -1,39 +1,11 @@
 "use client";
 
 import Button from "@/app/components/Button/Button";
-import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { useParallax } from "@/app/hooks/useParallax";
+import { useMinWidth } from "@/app/hooks/useMinWidth";
 import "./HeaderSection.scss";
-
-function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [distance, -distance]);
-}
-
-function useMinWidth(minWidth: number) {
-  const [matches, setMatches] = useState<boolean>(() =>
-    typeof window === "undefined" ? true : window.innerWidth >= minWidth,
-  );
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const query = window.matchMedia(`(min-width: ${minWidth}px)`);
-    const updateMatches = (event: MediaQueryListEvent) => {
-      setMatches(event.matches);
-    };
-
-    setMatches(query.matches);
-    query.addEventListener("change", updateMatches);
-
-    return () => {
-      query.removeEventListener("change", updateMatches);
-    };
-  }, [minWidth]);
-
-  return matches;
-}
 
 export default function HeaderSection() {
   const ref = useRef<HTMLElement | null>(null);

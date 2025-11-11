@@ -1,10 +1,8 @@
 'use client';
 
-import { ReactNode, useEffect, useRef, useState } from "react";
-import { GiHeartOrgan } from "react-icons/gi";
-import { HiOutlineChartBar } from "react-icons/hi";
-import { LuBrain, LuLeaf, LuStethoscope } from "react-icons/lu";
-import { RiRunLine } from "react-icons/ri";
+import { useState } from "react";
+import AccordionPanel from "@/app/components/Accordion/AccordionPanel";
+import { competencyGroups } from "./competencyGroups";
 import "./AboutSection.scss";
 
 export default function AboutSection() {
@@ -85,98 +83,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-const competencyGroups = [
-  {
-    title: "Diagnostyka i analizy",
-    competencies: [
-      { label: "Analiza wyników badań", Icon: HiOutlineChartBar },
-      { label: "Zaburzenia tarczycy", Icon: LuStethoscope },
-      { label: "Interpretacja wyników hormonalnych", Icon: GiHeartOrgan },
-      { label: "Ocena mikrobioty jelitowej", Icon: LuBrain },
-    ],
-  },
-  {
-    title: "Specjalizacje dietetyczne",
-    competencies: [
-      { label: "Diety Low FODMAP", Icon: LuLeaf },
-      { label: "Wsparcie przy IO i PCOS", Icon: GiHeartOrgan },
-      { label: "Zaburzenia odżywiania", Icon: LuBrain },
-      { label: "Żywienie sportowców", Icon: RiRunLine },
-    ],
-  },
-  {
-    title: "Praca z pacjentem",
-    competencies: [
-      { label: "Psychodietetyka", Icon: LuBrain },
-      { label: "Coaching zdrowotny", Icon: HiOutlineChartBar },
-      { label: "Budowanie planów długoterminowych", Icon: RiRunLine },
-      { label: "Wsparcie emocjonalne", Icon: GiHeartOrgan },
-    ],
-  },
-];
-
-type AccordionPanelProps = {
-  isActive: boolean;
-  children: ReactNode;
-};
-
-function AccordionPanel({ isActive, children }: AccordionPanelProps) {
-  const panelRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const panel = panelRef.current;
-    if (!panel) {
-      return;
-    }
-
-    if (isActive) {
-      // Otwieranie panelu
-      const startHeight = `${panel.scrollHeight}px`;
-      panel.style.overflow = "hidden";
-      panel.style.height = startHeight;
-      panel.style.opacity = "1";
-
-      const handleTransitionEnd = (event: TransitionEvent) => {
-        if (event.propertyName !== "height" || panelRef.current !== panel) {
-          return;
-        }
-
-        panel.style.height = "auto";
-        panel.style.overflow = "visible";
-      };
-
-      panel.addEventListener("transitionend", handleTransitionEnd);
-
-      return () => {
-        panel.removeEventListener("transitionend", handleTransitionEnd);
-      };
-    } else {
-      // Zamykanie panelu
-      const startHeight = `${panel.scrollHeight}px`;
-      panel.style.overflow = "hidden";
-      panel.style.height = startHeight;
-      panel.style.opacity = "1";
-
-      requestAnimationFrame(() => {
-        if (!panelRef.current) {
-          return;
-        }
-
-        panel.style.height = "0px";
-        panel.style.opacity = "0";
-      });
-    }
-  }, [isActive]);
-
-  return (
-    <div
-      ref={panelRef}
-      className={`about-section__accordion-panel${isActive ? " about-section__accordion-panel--open" : ""}`}
-    >
-      {children}
-    </div>
   );
 }

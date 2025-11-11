@@ -1,71 +1,14 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import { useCarousel } from "@/app/hooks/useCarousel";
+import { reviews } from "./reviews";
 import "./ReviewsSection.scss";
-
-type Review = {
-  id: number;
-  author: string;
-  condition: string;
-  avatar: string;
-  content: string;
-};
 
 const AUTOPLAY_INTERVAL_MS = 6000;
 
 export default function ReviewsSection() {
-  const reviews = useMemo<Review[]>(
-    () => [
-      {
-        id: 1,
-        author: "Ania",
-        condition: "insulinooporność",
-        avatar: "/woman.jpg",
-        content:
-          "Jagoda pomogła mi wypracować nowe nawyki, które realnie zobaczyłam na wynikach badań. Zero presji, dużo wsparcia.",
-      },
-      {
-        id: 2,
-        author: "Kasia",
-        condition: "problemy z tarczycą",
-        avatar: "/woman.jpg",
-        content:
-          "Wreszcie mam jasny plan żywieniowy, który działa i nie zabiera mi całej energii. Prosto, jasno i z empatią.",
-      },
-      {
-        id: 3,
-        author: "Marek",
-        condition: "redukcja wagi po kontuzji",
-        avatar: "/man.jpg",
-        content:
-          "Czułem się wysłuchany. Jagoda tłumaczy wszystko z cierpliwością i poczuciem humoru. Gorąco polecam jej wsparcie.",
-      },
-      {
-        id: 4,
-        author: "Ola",
-        condition: "PCOS i wahania hormonalne",
-        avatar: "/woman.jpg",
-        content:
-          "Plan żywieniowy był dopasowany do mojej codzienności. Po raz pierwszy czuję stabilizację hormonów i energii w ciągu dnia.",
-      },
-    ],
-    []
-  );
-
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % reviews.length);
-    }, AUTOPLAY_INTERVAL_MS);
-
-    return () => window.clearInterval(timer);
-  }, [reviews.length]);
-
-  const goTo = (index: number) => {
-    setActiveIndex((reviews.length + index) % reviews.length);
-  };
+  const { activeIndex, goTo } = useCarousel(reviews.length, AUTOPLAY_INTERVAL_MS);
 
   return (
     <section className="reviews-section">
