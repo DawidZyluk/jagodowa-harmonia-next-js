@@ -24,16 +24,20 @@ export default function AboutSection() {
           <h2 className="about-section__title">
             Rozumiem zdrowie nie tylko z książek, ale z własnej historii
           </h2>
-          <p className="about-section__paragraph">
-            Nazywam się Jagoda i jestem certyfikowaną dietetyczką online z wykształceniem w chemii medycznej.
-Pomagam kobietom z insulinoopornością, niedoczynnością tarczycy i zaburzeniami hormonalnymi poprawić wyniki badań, odzyskać energię i spokój z jedzeniem - bez restrykcji i głodówek.
-<br />
-Pracuję z osobami, które chcą schudnąć w zdrowy sposób lub poprawić swoje samopoczucie poprzez dopasowany plan żywieniowy online.
-Sama przeszłam przez zaburzenia odżywiania i zmagam się z niedoczynnością tarczycy, dlatego wiem, jak ważne jest podejście oparte na zrozumieniu, fizjologii i empatii - a nie tylko na liczeniu kalorii.
-<br />
-Wiem też, jak trudno jest znaleźć wsparcie bez oceniania.
-Dlatego każda współpraca ze mną to przestrzeń, w której możesz mówić o swoich trudnościach i potrzebach otwarcie - bez wstydu i bez presji.
-          </p>
+          <div className="about-section__paragraph">
+            <p>
+              Nazywam się Jagoda i jestem certyfikowaną dietetyczką online z wykształceniem w chemii medycznej.
+              Pomagam kobietom z insulinoopornością, niedoczynnością tarczycy i zaburzeniami hormonalnymi poprawić wyniki badań, odzyskać energię i spokój z jedzeniem - bez restrykcji i głodówek.
+            </p>
+            <p>
+              Pracuję z osobami, które chcą schudnąć w zdrowy sposób lub poprawić swoje samopoczucie poprzez dopasowany plan żywieniowy online.
+              Sama przeszłam przez zaburzenia odżywiania i zmagam się z niedoczynnością tarczycy, dlatego wiem, jak ważne jest podejście oparte na zrozumieniu, fizjologii i empatii - a nie tylko na liczeniu kalorii.
+            </p>
+            <p>
+              Wiem też, jak trudno jest znaleźć wsparcie bez oceniania.
+              Dlatego każda współpraca ze mną to przestrzeń, w której możesz mówić o swoich trudnościach i potrzebach otwarcie - bez wstydu i bez presji.
+            </p>
+          </div>
         </div>
       </div>
 

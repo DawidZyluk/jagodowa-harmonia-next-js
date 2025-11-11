@@ -88,6 +88,14 @@
   &__paragraph {
     font-size: 1.1rem;
     line-height: 1.85;
+
+    p {
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__button {
