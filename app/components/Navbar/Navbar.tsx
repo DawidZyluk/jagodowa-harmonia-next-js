@@ -29,18 +29,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-useEffect(() => {
-  if (typeof window === "undefined") return;
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1100) {
+        setIsMenuOpen(false);
+      }
+    };
 
-  const handleResize = () => {
-    if (window.innerWidth >= 1100) {
-      setIsMenuOpen(false);
-    }
-  };
-
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>

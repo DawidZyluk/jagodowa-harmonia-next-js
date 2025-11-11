@@ -133,25 +133,8 @@ function AccordionPanel({ isActive, children }: AccordionPanelProps) {
     }
 
     if (isActive) {
-      panel.style.height = "auto";
-      panel.style.opacity = "1";
-      panel.style.overflow = "visible";
-    } else {
-      panel.style.height = "0px";
-      panel.style.opacity = "0";
-      panel.style.overflow = "hidden";
-    }
-  }, []);
-
-  useEffect(() => {
-    const panel = panelRef.current;
-    if (!panel) {
-      return;
-    }
-
-    const startHeight = `${panel.scrollHeight}px`;
-
-    if (isActive) {
+      // Otwieranie panelu
+      const startHeight = `${panel.scrollHeight}px`;
       panel.style.overflow = "hidden";
       panel.style.height = startHeight;
       panel.style.opacity = "1";
@@ -170,20 +153,22 @@ function AccordionPanel({ isActive, children }: AccordionPanelProps) {
       return () => {
         panel.removeEventListener("transitionend", handleTransitionEnd);
       };
+    } else {
+      // Zamykanie panelu
+      const startHeight = `${panel.scrollHeight}px`;
+      panel.style.overflow = "hidden";
+      panel.style.height = startHeight;
+      panel.style.opacity = "1";
+
+      requestAnimationFrame(() => {
+        if (!panelRef.current) {
+          return;
+        }
+
+        panel.style.height = "0px";
+        panel.style.opacity = "0";
+      });
     }
-
-    panel.style.overflow = "hidden";
-    panel.style.height = startHeight;
-    panel.style.opacity = "1";
-
-    requestAnimationFrame(() => {
-      if (!panelRef.current) {
-        return;
-      }
-
-      panel.style.height = "0px";
-      panel.style.opacity = "0";
-    });
   }, [isActive]);
 
   return (
