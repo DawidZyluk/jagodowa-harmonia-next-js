@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import "./ServicesSection.scss";
 
 type Service = {
@@ -62,33 +61,33 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className={classNames("services-section")} id="services">
-      <div className={classNames("services-section__container")}>
-        <div className={classNames("services-section__intro")}>
-          <h2 className={classNames("services-section__title")}>Usługi dietetyczne</h2>
-          <p className={classNames("services-section__subtitle")}>
+    <section className="services-section" id="services">
+      <div className="services-section__container">
+        <div className="services-section__intro">
+          <h2 className="services-section__title">Usługi dietetyczne</h2>
+          <p className="services-section__subtitle">
             Wybierz formę współpracy - konsultację dietetyczną online lub spotkanie w gabinecie - dopasowaną do Twoich potrzeb i stylu życia.
           </p>
         </div>
 
-        <ul className={classNames("services-section__list")}>
+        <ul className="services-section__list">
           {services.map((service) => (
-            <li key={service.id} className={classNames("services-card")}>
-              <span className={classNames("services-card__icon")} aria-hidden="true">
+            <li key={service.id} className="services-card">
+              <span className="services-card__icon" aria-hidden="true">
                 {service.icon}
               </span>
-              <div className={classNames("services-card__content")}>
-                <span className={classNames("services-card__accent")}>{service.accent}</span>
-                <h3 className={classNames("services-card__title")}>{service.title}</h3>
-                <p className={classNames("services-card__description")}>{service.description}</p>
+              <div className="services-card__content">
+                <span className="services-card__accent">{service.accent}</span>
+                <h3 className="services-card__title">{service.title}</h3>
+                <p className="services-card__description">{service.description}</p>
               </div>
             </li>
           ))}
         </ul>
 
-        <div className={classNames("services-section__note")}>
+        <div className="services-section__note">
           <p>
-            Nie wiesz, od czego zacząć? Zacznij od spotkania „Kawka z dietetykiem” - sprawdzimy wspólnie, jaka forma współpracy będzie
+            Nie wiesz, od czego zacząć? Zacznij od spotkania „Kawka z dietetykiem" - sprawdzimy wspólnie, jaka forma współpracy będzie
             najlepsza.
           </p>
         </div>

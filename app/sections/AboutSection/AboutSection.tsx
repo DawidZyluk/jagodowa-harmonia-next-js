@@ -1,6 +1,5 @@
 'use client';
 
-import classNames from "classnames";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { GiHeartOrgan } from "react-icons/gi";
 import { HiOutlineChartBar } from "react-icons/hi";
@@ -12,20 +11,20 @@ export default function AboutSection() {
   const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   return (
-    <section className={classNames("about-section")} id="about">
-      <div className={classNames("about-section__content")}>
-        <div className={classNames("about-section__media")}>
-          <div className={classNames("about-section__image")}>
+    <section className="about-section" id="about">
+      <div className="about-section__content">
+        <div className="about-section__media">
+          <div className="about-section__image">
             <img src="/4.jpg" alt="Jagoda podczas konsultacji dietetycznej" />
           </div>
         </div>
 
-        <div className={classNames("about-section__copy")}>
-          <p className={classNames("about-section__eyebrow")}>O mnie</p>
-          <h2 className={classNames("about-section__title")}>
+        <div className="about-section__copy">
+          <p className="about-section__eyebrow">O mnie</p>
+          <h2 className="about-section__title">
             Rozumiem zdrowie nie tylko z książek, ale z własnej historii
           </h2>
-          <p className={classNames("about-section__paragraph")}>
+          <p className="about-section__paragraph">
             Nazywam się Jagoda i jestem certyfikowaną dietetyczką online z wykształceniem w chemii medycznej.
 Pomagam kobietom z insulinoopornością, niedoczynnością tarczycy i zaburzeniami hormonalnymi poprawić wyniki badań, odzyskać energię i spokój z jedzeniem - bez restrykcji i głodówek.
 <br />
@@ -38,26 +37,24 @@ Dlatego każda współpraca ze mną to przestrzeń, w której możesz mówić o 
         </div>
       </div>
 
-      <div className={classNames("about-section__metrics")}>
-        <div className={classNames("about-section__metrics-background")} aria-hidden />
+      <div className="about-section__metrics">
+        <div className="about-section__metrics-background" aria-hidden />
 
-        <div className={classNames("about-section__metrics-content")}>
-          <h2 className={classNames("about-section__metrics-title")}>Kompetencje</h2>
+        <div className="about-section__metrics-content">
+          <h2 className="about-section__metrics-title">Kompetencje</h2>
 
-          <div className={classNames("about-section__accordion")}>
+          <div className="about-section__accordion">
             {competencyGroups.map(({ title, competencies }) => {
               const isActive = activeAccordion === title;
 
               return (
                 <div
                   key={title}
-                  className={classNames("about-section__accordion-item", {
-                    "about-section__accordion-item--active": isActive,
-                  })}
+                  className={`about-section__accordion-item${isActive ? " about-section__accordion-item--active" : ""}`}
                 >
                   <button
                     type="button"
-                    className={classNames("about-section__accordion-trigger")}
+                    className="about-section__accordion-trigger"
                     onClick={() => setActiveAccordion(isActive ? null : title)}
                     aria-expanded={isActive}
                   >
@@ -66,13 +63,13 @@ Dlatego każda współpraca ze mną to przestrzeń, w której możesz mówić o 
                   </button>
 
                   <AccordionPanel isActive={isActive}>
-                    <div className={classNames("about-section__metrics-grid")}>
+                    <div className="about-section__metrics-grid">
                       {competencies.map(({ label, Icon }) => (
-                        <div key={label} className={classNames("about-section__metric-card")}>
-                          <div className={classNames("about-section__metric-icon")}>
+                        <div key={label} className="about-section__metric-card">
+                          <div className="about-section__metric-icon">
                             <Icon aria-hidden />
                           </div>
-                          <p className={classNames("about-section__metric-label")}>{label}</p>
+                          <p className="about-section__metric-label">{label}</p>
                         </div>
                       ))}
                     </div>
@@ -188,9 +185,7 @@ function AccordionPanel({ isActive, children }: AccordionPanelProps) {
   return (
     <div
       ref={panelRef}
-      className={classNames("about-section__accordion-panel", {
-        "about-section__accordion-panel--open": isActive,
-      })}
+      className={`about-section__accordion-panel${isActive ? " about-section__accordion-panel--open" : ""}`}
     >
       {children}
     </div>

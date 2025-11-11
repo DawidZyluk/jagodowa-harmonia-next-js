@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import classNames from "classnames";
 import "./ReviewsSection.scss";
 
 type Review = {
@@ -69,21 +68,21 @@ export default function ReviewsSection() {
   };
 
   return (
-    <section className={classNames("reviews-section")}>
-      <div className={classNames("reviews-section__container")}>
-        <h2 className={classNames("reviews-section__title")}>Opinie podopiecznych</h2>
-        <p className={classNames("reviews-section__paragraph")}>Realne rezultaty i zadowolenie klientów motywują najbardziej.</p>
+    <section className="reviews-section">
+      <div className="reviews-section__container">
+        <h2 className="reviews-section__title">Opinie podopiecznych</h2>
+        <p className="reviews-section__paragraph">Realne rezultaty i zadowolenie klientów motywują najbardziej.</p>
 
-        <div className={classNames("reviews-carousel")}>
-          <div className={classNames("reviews-carousel__viewport")}>
+        <div className="reviews-carousel">
+          <div className="reviews-carousel__viewport">
             <div
-              className={classNames("reviews-carousel__track")}
+              className="reviews-carousel__track"
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
               {reviews.map((review, index) => (
-                <article key={review.id} className={classNames("reviews-carousel__slide")}>
-                  <span className={classNames("reviews-carousel__quote")} aria-hidden="true" />
-                  <div className={classNames("reviews-carousel__avatar")}>
+                <article key={review.id} className="reviews-carousel__slide">
+                  <span className="reviews-carousel__quote" aria-hidden="true" />
+                  <div className="reviews-carousel__avatar">
                     <Image
                       src={review.avatar}
                       alt={`Zdjęcie ${review.author}`}
@@ -92,25 +91,23 @@ export default function ReviewsSection() {
                       priority={index === 0}
                     />
                   </div>
-                  <p className={classNames("reviews-carousel__content")}>{review.content}</p>
-                  <div className={classNames("reviews-carousel__details")}>
-                    <span className={classNames("reviews-carousel__author")}>{review.author}</span>
-                    <span className={classNames("reviews-carousel__condition")}>{review.condition}</span>
+                  <p className="reviews-carousel__content">{review.content}</p>
+                  <div className="reviews-carousel__details">
+                    <span className="reviews-carousel__author">{review.author}</span>
+                    <span className="reviews-carousel__condition">{review.condition}</span>
                   </div>
                 </article>
               ))}
             </div>
           </div>
 
-          <div className={classNames("reviews-carousel__dots")} role="tablist" aria-label="Opinie klientów">
+          <div className="reviews-carousel__dots" role="tablist" aria-label="Opinie klientów">
             {reviews.map((review, index) => (
               <button
                 key={review.id}
                 type="button"
                 onClick={() => goTo(index)}
-                className={classNames("reviews-carousel__dot", {
-                  "reviews-carousel__dot--active": index === activeIndex,
-                })}
+                className={`reviews-carousel__dot${index === activeIndex ? " reviews-carousel__dot--active" : ""}`}
                 aria-label={`Przejdź do opinii ${index + 1}`}
                 aria-selected={index === activeIndex}
                 role="tab"
