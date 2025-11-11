@@ -11,29 +11,35 @@ export default function CooperationFormsSection() {
         <div className={classNames("cooperation-forms-section__list")}>
           <div className={classNames("cooperation-forms-section__item")}>
             <div className={classNames("cooperation-forms-section__item-media")}>
-              <img src="/stolik.jpg" alt="Spotkanie z dietetykiem przy stole" />
+              <img src="/stolik.jpg" alt="Współpraca z dietetykiem przy stole" />
             </div>
-            <h3>Spotkanie online lub stacjonarne z dietetykiem</h3>
-            <p className={classNames("cooperation-forms-section__item-subtitle")}>Online lub stacjonarnie</p>
-            <p>Możesz wybrać formę współpracy, która najbardziej Ci odpowiada – zdalnie przez internet lub podczas spotkań twarzą w twarz. Dzięki temu dostosujemy sposób kontaktu do Twojego trybu życia i wygody, zapewniając jednocześnie pełne wsparcie.</p>
+            <h3>Pakiety współpracy dietetycznej online</h3>
+            <p className={classNames("cooperation-forms-section__item-subtitle")}>Online</p>
+            <p>Dla kobiet, które chcą kompleksowej opieki i wsparcia w zmianie stylu życia.
+W ramach pakietu otrzymasz regularne konsultacje, stały kontakt przez WhatsApp, check-iny co kilka dni oraz indywidualny jadłospis dopasowany do Twojego zdrowia i celów. Razem nauczymy Twoje ciało współpracy, a nie walki - z troską, spokojem i zrozumieniem.
+</p>
           </div>
           
           <div className={classNames("cooperation-forms-section__item")}>
             <div className={classNames("cooperation-forms-section__item-media")}>
-              <img src="/laptop.jpg" alt="Diet coaching realizowany online z dietetykiem" />
+              <img src="/laptop.jpg" alt="Konsultacja online z dietetykiem" />
             </div>
-            <h3>Diet coaching, wizyty kontrolne - wsparcie i motywacja do zdrowych nawyków</h3>
-            <p className={classNames("cooperation-forms-section__item-subtitle")}>Diet coaching</p>
-            <p>Diet coach to wsparcie na co dzień, które pomaga w utrzymaniu motywacji i wprowadzaniu zdrowych nawyków żywieniowych. Razem wypracujemy plan działania, który będzie realny do realizacji i dostosowany do Twojego stylu życia.</p>
+            <h3>Pojedyncze spotkanie z dietetykiem</h3>
+            <p className={classNames("cooperation-forms-section__item-subtitle")}>Szybka i konkretna porada</p>
+            <p>Dla osób, które potrzebują jednorazowej analizy, wskazówek lub pomocy w interpretacji wyników badań.
+W trakcie spotkania omówimy Twoje nawyki, styl życia, objawy i zdrowie hormonalne.
+Otrzymasz indywidualne zalecenia, które pomogą Ci wprowadzić pierwsze zmiany - bez presji, ale z konkretnym planem działania.</p>
           </div>
           
           <div className={classNames("cooperation-forms-section__item")}>
             <div className={classNames("cooperation-forms-section__item-media")}>
-              <img src="/waga.jpg" alt="Analiza wyników zdrowotnych podczas konsultacji dietetycznej" />
+              <img src="/f.jpg" alt="Zdrowe bowle na słodko z owocami i orzechami - przykład z indywidualnego jadłospisu dietetycznego online" />
             </div>
-            <h3>Jednorazowa konsultacja dietetyczna - szybka porada żywieniowa</h3>
-            <p className={classNames("cooperation-forms-section__item-subtitle")}>Jednorazowa konsultacja dietetyczna</p>
-            <p>Jeśli potrzebujesz szybkiej porady lub wskazówek dotyczących diety, jednorazowa konsultacja będzie idealnym rozwiązaniem. Otrzymasz indywidualne zalecenia, które pomogą Ci lepiej zrozumieć swoje potrzeby żywieniowe i podjąć świadome decyzje.</p>
+            <h3>Jadłospisy indywidualne</h3>
+            <p className={classNames("cooperation-forms-section__item-subtitle")}>Dopasowany do Ciebie</p>
+            <p>Stworzony w oparciu o Twoje potrzeby zdrowotne, preferencje, wyniki badań i styl życia.
+Możesz wybrać jadłospis otwarty - elastyczny plan makroskładników, lub jadłospis zamknięty - gotowe przepisy i listy zakupów.
+Każdy plan jest indywidualny i wspiera Twoje cele: równowagę hormonalną, lepsze trawienie, poprawę wyników i więcej energii na co dzień.</p>
           </div>
         </div>
       </div>

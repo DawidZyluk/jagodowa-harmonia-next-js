@@ -82,25 +82,25 @@ export default function HeaderSection() {
 
         <div className={classNames.content}>
           <h1 className={classNames.title}>
-            Cześć, jestem Jagoda - dietetyczka z własną historią.
+            Cześć, jestem Jagoda - dietetyczka, która sama przeszła drogę do zdrowia i równowagi.
           </h1>
           <p className={classNames.description}>
-            Tworzę smaczne i skuteczne plany żywieniowe, które pomagają polepszyć
-            wyniki badań, zwiększyć energię i poprawić samopoczucie.
+            Pomagam osobom z insulinoopornością, zaburzeniami hormonalnymi i problemami jelitowymi zrozumieć swoje ciało i odzyskać energię poprzez jedzenie dopasowane do ich potrzeb.
+Tworzę proste i skuteczne plany żywieniowe, które wspierają wyniki badań i dobre samopoczucie - bez restrykcji i presji.
           </p>
-          <Button href="https://jagodowa-harmonia.timego.pl/services">Umów wizytę</Button>
+          <Button href="https://jagodowa-harmonia.timego.pl/services">Umów BEZPŁATNĄ konsultację online</Button>
         </div>
       </section>
 
       <section className={classNames["content-mobile"]}>
         <h1 className={classNames.title}>
-          Cześć, jestem Jagoda - dietetyczka z własną historią.
+          Cześć, jestem Jagoda - dietetyczka, która sama przeszła drogę do zdrowia i równowagi.
         </h1>
         <p className={classNames.description}>
-          Tworzę smaczne i skuteczne plany żywieniowe, które pomagają polepszyć
-          wyniki badań, zwiększyć energię i poprawić samopoczucie.
+          Pomagam osobom z insulinoopornością, zaburzeniami hormonalnymi i problemami jelitowymi zrozumieć swoje ciało i odzyskać energię poprzez jedzenie dopasowane do ich potrzeb.
+Tworzę proste i skuteczne plany żywieniowe, które wspierają wyniki badań i dobre samopoczucie - bez restrykcji i presji.
         </p>
-        <Button href="https://jagodowa-harmonia.timego.pl/services">Umów wizytę</Button>
+        <Button href="https://jagodowa-harmonia.timego.pl/services">Umów BEZPŁATNĄ konsultację online</Button>
       </section>
     </>
   );

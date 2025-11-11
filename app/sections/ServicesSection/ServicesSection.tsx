@@ -22,7 +22,7 @@ const services: Service[] = [
     id: 2,
     title: "Konsultacja wstępna",
     description:
-      "Analiza wyników badań, historii zdrowia i stylu życia. Otrzymasz zalecenia żywieniowe, plan działania i wskazówki, od czego zacząć.",
+      "Pełna analiza Twojego sposobu żywienia, wyników badań i stylu życia. Otrzymasz indywidualne zalecenia i wskazówki krok po kroku w ciągu 5 dni roboczych.",
     accent: "60 minut / online lub gabinet",
     icon: "🩺",
   },
@@ -30,7 +30,7 @@ const services: Service[] = [
     id: 3,
     title: "Jadłospis otwarty",
     description:
-      "Elastyczny plan z bazą produktów i gotowymi kombinacjami posiłków, który możesz samodzielnie modyfikować według apetytu i grafiku.",
+      "Elastyczny plan z bazą produktów i kombinacjami posiłków w Twoich makroskładnikach - Ty komponujesz posiłki według własnych preferencji.",
     accent: "idealny dla zabieganych",
     icon: "📝",
   },
@@ -38,7 +38,7 @@ const services: Service[] = [
     id: 4,
     title: "Jadłospis zamknięty",
     description:
-      "7- lub 14-dniowy jadłospis z gramaturami, listą zakupów i zdjęciami potraw. Wybór dla osób, które chcą mieć wszystko rozpisane.",
+      "Gotowy plan z przepisami, zdjęciami i listą zakupów - dopasowany do Twojego stylu życia i dolegliwości. Wybór dla osób, które chcą mieć wszystko rozpisane.",
     accent: "pełna personalizacja",
     icon: "🍽️",
   },
@@ -54,7 +54,7 @@ const services: Service[] = [
     id: 6,
     title: "Analiza składu ciała",
     description:
-      "Badanie na analizatorze InBody, które pokazuje zawartość mięśni, tłuszczu, wody i wiek metaboliczny. Podstawa do wdrożenia terapii.",
+      "Badanie na analizatorze TANITA, które pokazuje zawartość mięśni, tłuszczu, wody i wiek metaboliczny. Podstawa do wdrożenia terapii.",
     accent: "wyniki na miejscu",
     icon: "📊",
   },
@@ -67,7 +67,7 @@ export default function ServicesSection() {
         <div className={classNames("services-section__intro")}>
           <h2 className={classNames("services-section__title")}>Usługi dietetyczne</h2>
           <p className={classNames("services-section__subtitle")}>
-            Spotkania online i w gabinecie w Warszawie. Wybierz formę, która najlepiej pasuje do Twoich potrzeb i stylu życia.
+            Wybierz formę współpracy - konsultację dietetyczną online lub spotkanie w gabinecie - dopasowaną do Twoich potrzeb i stylu życia.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function ServicesSection() {
 
         <div className={classNames("services-section__note")}>
           <p>
-            Nie wiesz, od czego zacząć? Zacznij od spotkania „Kawka z dietetykiem” – sprawdzimy wspólnie, jaka forma współpracy będzie
+            Nie wiesz, od czego zacząć? Zacznij od spotkania „Kawka z dietetykiem” - sprawdzimy wspólnie, jaka forma współpracy będzie
             najlepsza.
           </p>
         </div>

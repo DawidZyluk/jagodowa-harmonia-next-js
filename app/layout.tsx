@@ -13,43 +13,47 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jagodowa-harmonia.pl"),
   title: {
-    default: "Jagodowa Harmonia | Dietetyk kliniczny w Warszawie i online",
+    default: "Jagodowa Harmonia | Dietetyczka kliniczna online",
     template: "%s | Jagodowa Harmonia",
   },
   description:
-    "Jagodowa Harmonia to gabinet dietetyczny Jagody – dietetyczki klinicznej wspierającej w insulinooporności, PCOS, chorobach tarczycy i zdrowej redukcji masy ciała. Konsultacje online i stacjonarnie w Warszawie.",
+    "Konsultacje dietetyczne online, indywidualne jadłospisy i wsparcie w insulinooporności, PCOS oraz chorobach tarczycy. Empatyczna opieka dietetyczna – bez restrykcji.",
   icons: {
     icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
   applicationName: "Jagodowa Harmonia",
   keywords: [
-    "dietetyk Warszawa",
     "dietetyk online",
+    "konsultacja dietetyczna online",
+    "jadłospis online",
     "insulinooporność dieta",
-    "PCOS jadłospis",
+    "PCOS dieta",
+    "choroby tarczycy dieta",
     "dietetyk kliniczny",
     "plan żywieniowy",
-    "jadłospis redukcyjny",
-    "coaching żywieniowy",
   ],
-  authors: [{ name: "Jagoda – Jagodowa Harmonia", url: "https://jagodowa-harmonia.pl" }],
+  authors: [{ name: "Jagoda", url: "https://jagodowa-harmonia.pl" }],
   creator: "Jagodowa Harmonia",
   publisher: "Jagodowa Harmonia",
-  category: "health",
   alternates: {
-    canonical: "/",
+    canonical: "https://jagodowa-harmonia.pl/",
+    languages: {
+      "pl-PL": "https://jagodowa-harmonia.pl/",
+      // "en-US": "https://jagodowa-harmonia.pl/en" // jeśli kiedyś dodasz EN
+    },
   },
   openGraph: {
-    title: "Jagodowa Harmonia | Dietetyk kliniczny w Warszawie i online",
+    title: "Jagodowa Harmonia | Dietetyczka kliniczna online",
     description:
-      "Indywidualne konsultacje dietetyczne, jadłospisy i diet coaching dla osób z insulinoopornością, PCOS, chorobami tarczycy oraz w trakcie zdrowej redukcji.",
+      "Indywidualne konsultacje dietetyczne, jadłospisy i diet coaching online dla kobiet z insulinoopornością, PCOS i chorobami tarczycy.",
     url: "https://jagodowa-harmonia.pl",
     siteName: "Jagodowa Harmonia",
     locale: "pl_PL",
     type: "website",
     images: [
       {
-        url: "/logo.png",
+        url: "https://jagodowa-harmonia.pl/logo.png",
         width: 600,
         height: 600,
         alt: "Jagodowa Harmonia – logo",
@@ -58,10 +62,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jagodowa Harmonia | Dietetyk kliniczny w Warszawie i online",
+    title: "Jagodowa Harmonia | Dietetyczka kliniczna online",
     description:
-      "Indywidualne konsultacje dietetyczne, jadłospisy i diet coaching dla osób z insulinoopornością, PCOS oraz chorób tarczycy.",
-    images: ["/logo.png"],
+      "Konsultacje dietetyczne i jadłospisy online: insulinooporność, PCOS, tarczyca. Empatyczne wsparcie bez restrykcji.",
+    images: ["https://jagodowa-harmonia.pl/logo.png"],
   },
   robots: {
     index: true,
@@ -74,6 +78,8 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  // opcjonalnie:
+  // themeColor: "#8abf9e",
 };
 
 const organizationJsonLd = {
@@ -82,74 +88,59 @@ const organizationJsonLd = {
   "@id": "https://jagodowa-harmonia.pl/#organization",
   name: "Jagodowa Harmonia",
   description:
-    "Dietetyk kliniczny w Warszawie i online. Konsultacje, indywidualne jadłospisy, diet coaching, wsparcie w insulinooporności, PCOS i chorobach tarczycy.",
+    "Dietetyczka kliniczna online. Konsultacje, indywidualne jadłospisy, diet coaching. Wsparcie w insulinooporności, PCOS i chorobach tarczycy.",
   url: "https://jagodowa-harmonia.pl",
   logo: "https://jagodowa-harmonia.pl/logo.png",
   image: "https://jagodowa-harmonia.pl/logo.png",
   telephone: "+48 789 162 740",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "al. Solidarności 117",
-    addressLocality: "Warszawa",
-    postalCode: "00-140",
-    addressCountry: "PL",
-  },
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "Polska",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-  ],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: "+48 789 162 740",
-      contactType: "customer service",
-      areaServed: "PL",
-      availableLanguage: ["pl-PL"],
-    },
+  areaServed: "PL",
+  sameAs: [
+    // dodaj social media, jeśli masz
   ],
   offers: [
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Konsultacje dietetyczne online i stacjonarne",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Indywidualne jadłospisy",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Diet coaching i wsparcie nawyków żywieniowych",
-      },
-    },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Konsultacje dietetyczne online" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Indywidualne jadłospisy online" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Diet coaching i wsparcie nawyków" } },
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://jagodowa-harmonia.pl/#person",
+  name: "Jagoda",
+  jobTitle: "Dietetyczka certifikowana kliniczna",
+  url: "https://jagodowa-harmonia.pl",
+  image: "https://jagodowa-harmonia.pl/logo.png",
+  worksFor: { "@id": "https://jagodowa-harmonia.pl/#organization" },
+  sameAs: [],
+};
+
+const webSiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://jagodowa-harmonia.pl/#website",
+  url: "https://jagodowa-harmonia.pl",
+  name: "Jagodowa Harmonia",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://jagodowa-harmonia.pl/szukaj?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pl">
       <body className={poppins.variable}>
-        <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
+        <Script id="org-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(organizationJsonLd)}
+        </Script>
+        <Script id="person-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(personJsonLd)}
+        </Script>
+        <Script id="website-schema" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(webSiteJsonLd)}
         </Script>
         <Navbar />
         {children}

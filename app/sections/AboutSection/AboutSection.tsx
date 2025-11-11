@@ -23,16 +23,17 @@ export default function AboutSection() {
         <div className={classNames("about-section__copy")}>
           <p className={classNames("about-section__eyebrow")}>O mnie</p>
           <h2 className={classNames("about-section__title")}>
-            Rozumiem zdrowie nie tylko z książek, ale przede wszystkim z własnego doświadczenia
+            Rozumiem zdrowie nie tylko z książek, ale z własnej historii
           </h2>
           <p className={classNames("about-section__paragraph")}>
-            Nazywam się Jagoda i jestem certyfikowanym dietetykiem z wykształceniem w chemii medycznej.
-            Pomagam osobom nie tylko schudnąć, ale przede wszystkim poprawić zdrowie i samopoczucie –
-            bez głodówek, z realnym, dopasowanym planem. Wspieram pacjentów z chorobami dietozależnymi,
-            ponieważ sama wyszłam z zaburzeń odżywiania oraz zmagam się z niedoczynnością tarczycy.
-            Dzięki własnym doświadczeniom rozumiem, jak ważne jest indywidualne podejście, uwzględniające
-            fizjologię i stan zdrowia, a nie tylko kalorie. Wiem też, jak trudne bywa wsparcie ze strony
-            otoczenia i jak ważne jest bez oceniania.
+            Nazywam się Jagoda i jestem certyfikowaną dietetyczką online z wykształceniem w chemii medycznej.
+Pomagam kobietom z insulinoopornością, niedoczynnością tarczycy i zaburzeniami hormonalnymi poprawić wyniki badań, odzyskać energię i spokój z jedzeniem - bez restrykcji i głodówek.
+<br />
+Pracuję z osobami, które chcą schudnąć w zdrowy sposób lub poprawić swoje samopoczucie poprzez dopasowany plan żywieniowy online.
+Sama przeszłam przez zaburzenia odżywiania i zmagam się z niedoczynnością tarczycy, dlatego wiem, jak ważne jest podejście oparte na zrozumieniu, fizjologii i empatii - a nie tylko na liczeniu kalorii.
+<br />
+Wiem też, jak trudno jest znaleźć wsparcie bez oceniania.
+Dlatego każda współpraca ze mną to przestrzeń, w której możesz mówić o swoich trudnościach i potrzebach otwarcie - bez wstydu i bez presji.
           </p>
         </div>
       </div>
