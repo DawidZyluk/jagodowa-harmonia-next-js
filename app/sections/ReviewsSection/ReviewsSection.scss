@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as bp;
+
 .reviews-section {
   width: 100%;
   padding: 3.5rem 0;
@@ -8,12 +10,12 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: 750px) {
+  @media (max-width: bp.$breakpoint-sm) {
     border-bottom-left-radius: 30% 12%;
     border-bottom-right-radius: 30% 12%;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: bp.$breakpoint-xs) {
     border-bottom-left-radius: 25% 10%;
     border-bottom-right-radius: 25% 10%;
   }
@@ -146,7 +148,7 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 640px) {
+@media (max-width: bp.$breakpoint-sm) {
   .reviews-section {
     padding: 2.75rem 0;
   }
