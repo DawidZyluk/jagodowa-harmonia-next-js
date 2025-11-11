@@ -1,5 +1,4 @@
 import Link from "next/link";
-import classNames from "classnames";
 import "./Button.scss";
 import type {
   AnchorHTMLAttributes,
@@ -42,12 +41,12 @@ const Button = (props: ButtonProps) => {
     return (
       <Link
         href={href}
-        className={classNames("button", className)}
+        className={className ? `button ${className}` : "button"}
         target={target}
         rel={relValue}
         {...anchorProps}
       >
-        <span className={classNames("button__text")}>{children}</span>
+        <span className="button__text">{children}</span>
       </Link>
     );
   }
@@ -56,11 +55,11 @@ const Button = (props: ButtonProps) => {
 
   return (
     <button
-      className={classNames("button", className)}
+      className={className ? `button ${className}` : "button"}
       type={type}
       {...buttonProps}
     >
-      <span className={classNames("button__text")}>{children}</span>
+      <span className="button__text">{children}</span>
     </button>
   );
 };

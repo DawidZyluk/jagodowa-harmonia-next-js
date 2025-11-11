@@ -88,10 +88,14 @@
   &__paragraph {
     font-size: 1.1rem;
     line-height: 1.85;
-  }
 
-  &__button {
-    margin-top: 0.5rem;
+    p {
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__metrics {
@@ -218,20 +222,6 @@
       background: rgba(135, 77, 236, 0.18);
       color: #874dec;
       font-size: 1.35rem;
-    }
-  }
-
-  &__accordion-panel {
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition:
-      height 0.38s cubic-bezier(0.45, 0, 0.25, 1),
-      opacity 0.28s ease-in-out;
-    will-change: height, opacity;
-
-    &--open {
-      opacity: 1;
     }
   }
 }
