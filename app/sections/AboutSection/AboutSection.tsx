@@ -9,7 +9,7 @@ import { RiRunLine } from "react-icons/ri";
 import "./AboutSection.scss";
 
 export default function AboutSection() {
-  const [activeAccordion, setActiveAccordion] = useState<string | null>(competencyGroups[0].title);
+  const [activeAccordion, setActiveAccordion] = useState<string | null>(null);
 
   return (
     <section className={classNames("about-section")} id="about">
