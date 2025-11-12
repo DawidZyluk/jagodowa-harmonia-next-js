@@ -69,13 +69,7 @@ yarn install
 pnpm install
 ```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env.local
-# Edit .env.local and add your MailerLite account ID
-```
-
-4. Run the development server:
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -103,19 +97,9 @@ Breakpoints are defined in `app/styles/_breakpoints.scss` for consistent respons
 
 ## 🔧 Configuration
 
-### Environment Variables
-
-Create a `.env.local` file in the root directory with the following variables:
-
-```env
-NEXT_PUBLIC_MAILERLITE_ACCOUNT_ID=your_account_id_here
-```
-
-You can copy `.env.example` to `.env.local` as a starting point.
-
 ### MailerLite
 
-The MailerLite Universal script is included in the root layout (`app/layout.tsx`) and will be loaded on every page. The account ID is configured via the `NEXT_PUBLIC_MAILERLITE_ACCOUNT_ID` environment variable.
+The MailerLite Universal script is included in the root layout (`app/layout.tsx`) and will be loaded on every page. The account ID is configured directly in the script.
 
 ### Metadata
 

@@ -142,7 +142,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
               n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
               (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-              ml('account', '${process.env.NEXT_PUBLIC_MAILERLITE_ACCOUNT_ID || ''}');
+              ml('account', '1817318');
             `,
           }}
         />
