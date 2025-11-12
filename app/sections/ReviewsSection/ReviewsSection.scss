@@ -2,7 +2,7 @@
 
 .reviews-section {
   width: 100%;
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 6rem;
   background: #eceaf0;
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
@@ -149,10 +149,6 @@
 }
 
 @media (max-width: bp.$breakpoint-sm) {
-  .reviews-section {
-    padding: 2.75rem 0;
-  }
-
   .reviews-section__container {
     padding: 0 1.25rem;
   }

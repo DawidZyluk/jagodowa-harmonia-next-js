@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jagodowa Harmonia
 
-## Getting Started
+A modern, responsive website for a clinical dietitian practice built with Next.js. The site features a clean design, parallax scrolling effects, and comprehensive information about nutrition services, consultations, and dietary plans.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Stack**: Built with Next.js 16, React 19, and TypeScript
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Parallax Effects**: CSS-based parallax scrolling for engaging visual experience
+- **Performance Optimized**: Server-side rendering and optimized font loading
+- **SEO Friendly**: Comprehensive metadata, structured data (JSON-LD), and Open Graph tags
+- **Accessibility**: Semantic HTML and proper ARIA attributes
+- **MailerLite Integration**: Newsletter and form integration ready
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Styling**: SCSS (Sass)
+- **UI Components**: Custom components with BEM methodology
+- **Icons**: React Icons
+- **Animations**: Motion library
+- **Fonts**: Google Fonts (Poppins)
+
+## 📁 Project Structure
+
+```
+app/
+├── components/          # Reusable UI components
+│   ├── Accordion/      # Accordion component for collapsible content
+│   ├── Button/         # Button component
+│   ├── Footer/         # Footer component
+│   └── Navbar/         # Navigation bar
+├── sections/           # Page sections
+│   ├── HeaderSection/  # Hero section with parallax background
+│   ├── AboutSection/   # About section with competencies
+│   ├── ServicesSection/# Services and offerings
+│   ├── CooperationFormsSection/ # Cooperation options
+│   ├── ReviewsSection/ # Client testimonials
+│   └── ContactSection/ # Contact information and form
+├── hooks/              # Custom React hooks
+├── styles/             # Global styles and breakpoints
+├── utils/              # Utility functions
+├── layout.tsx          # Root layout with metadata
+└── page.tsx            # Home page
+```
+
+## 🚦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/DawidZyluk/jagodowa-harmonia-next-js.git
+cd jagodowa-harmonia
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+# Edit .env.local and add your MailerLite account ID
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📜 Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## 🎨 Styling
 
-To learn more about Next.js, take a look at the following resources:
+The project uses SCSS with BEM (Block Element Modifier) methodology for class naming. Global styles are defined in `app/globals.scss`, and each component/section has its own SCSS file.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Breakpoints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Breakpoints are defined in `app/styles/_breakpoints.scss` for consistent responsive design.
 
-## Deploy on Vercel
+## 🔧 Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Environment Variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+NEXT_PUBLIC_MAILERLITE_ACCOUNT_ID=your_account_id_here
+```
+
+You can copy `.env.example` to `.env.local` as a starting point.
+
+### MailerLite
+
+The MailerLite Universal script is included in the root layout (`app/layout.tsx`) and will be loaded on every page. The account ID is configured via the `NEXT_PUBLIC_MAILERLITE_ACCOUNT_ID` environment variable.
+
+### Metadata
+
+SEO metadata, Open Graph tags, and structured data (JSON-LD) are configured in `app/layout.tsx`. Update the metadata object to customize SEO settings.
+
+## 📦 Dependencies
+
+### Production
+- `next` - React framework
+- `react` & `react-dom` - UI library
+- `sass` - CSS preprocessor
+- `motion` - Animation library
+- `react-icons` - Icon library
+
+### Development
+- `typescript` - Type safety
+- `eslint` - Code linting
+- `tailwindcss` - Utility-first CSS (optional)
+
+## 🌐 Deployment
+
+The easiest way to deploy is using [Vercel](https://vercel.com):
+
+1. Push your code to a Git repository
+2. Import the project to Vercel
+3. Vercel will automatically detect Next.js and configure the build settings
+
+For other deployment options, see the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 👤 Author
+
+Built for Jagodowa Harmonia - Clinical Dietitian Practice
+
+---
+
+For more information about Next.js, check out the [Next.js documentation](https://nextjs.org/docs).
