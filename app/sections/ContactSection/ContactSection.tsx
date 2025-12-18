@@ -13,15 +13,14 @@ export default function ContactSection() {
 
         <div className={classNames("contact-section__info")}>
           <Button
-            href="https://jagodowa-harmonia.timego.pl/services"
+            href="https://app.zencal.io/u/jagoda-giedrojc-dietetyk"
             className={classNames("contact-section__button")}
           >
             Umów się online
           </Button>
           <p>Telefon</p>
           <p className={classNames("contact-section__value")}>+48 789 162 740</p>
-          <p>Gabinet</p>
-          <p className={classNames("contact-section__value")}>al. Solidarności 117/201b, 00-140 Warszawa</p>
+          
         </div>
       </div>
     </section>

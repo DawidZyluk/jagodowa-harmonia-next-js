@@ -88,7 +88,7 @@ export default function HeaderSection() {
             Pomagam osobom z insulinoopornością, zaburzeniami hormonalnymi i problemami jelitowymi zrozumieć swoje ciało i odzyskać energię poprzez jedzenie dopasowane do ich potrzeb.
 Tworzę proste i skuteczne plany żywieniowe, które wspierają wyniki badań i dobre samopoczucie - bez restrykcji i presji.
           </p>
-          <Button href="https://jagodowa-harmonia.timego.pl/services">Umów BEZPŁATNĄ konsultację online</Button>
+          <Button href="https://app.zencal.io/u/jagoda-giedrojc-dietetyk/porozmawiajmy-przy-kawce?lang=pl">Umów BEZPŁATNĄ konsultację online</Button>
         </div>
       </section>
 
@@ -100,7 +100,7 @@ Tworzę proste i skuteczne plany żywieniowe, które wspierają wyniki badań i 
           Pomagam osobom z insulinoopornością, zaburzeniami hormonalnymi i problemami jelitowymi zrozumieć swoje ciało i odzyskać energię poprzez jedzenie dopasowane do ich potrzeb.
 Tworzę proste i skuteczne plany żywieniowe, które wspierają wyniki badań i dobre samopoczucie - bez restrykcji i presji.
         </p>
-        <Button href="https://jagodowa-harmonia.timego.pl/services">Umów BEZPŁATNĄ konsultację online</Button>
+        <Button href="https://app.zencal.io/u/jagoda-giedrojc-dietetyk/porozmawiajmy-przy-kawce?lang=pl">Umów BEZPŁATNĄ konsultację online</Button>
       </section>
     </>
   );
