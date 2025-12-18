@@ -1,20 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import "./Navbar.scss";
 import { socialLinks } from "../../utils/socialLinks";
-
-const navLinks = [
-  { href: "#start", label: "Start" },
-  { href: "#about", label: "O mnie" },
-  { href: "#services", label: "Usługi" },
-  { href: "#cooperation", label: "Współpraca" },
-  { href: "#contact", label: "Kontakt" },
-];
+import { navLinks } from "./navLinks";
 
 export default function Navbar() {
   const [isSolid, setIsSolid] = useState(false);
@@ -30,29 +22,24 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-useEffect(() => {
-  if (typeof window === "undefined") return;
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1100) {
+        setIsMenuOpen(false);
+      }
+    };
 
-  const handleResize = () => {
-    if (window.innerWidth >= 1100) {
-      setIsMenuOpen(false);
-    }
-  };
-
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
       <header
-        className={classNames("navbar", {
-          "navbar--solid": isSolid,
-          "navbar--menu-open": isMenuOpen,
-        })}
+        className={`navbar${isSolid ? " navbar--solid" : ""}${isMenuOpen ? " navbar--menu-open" : ""}`}
       >
-        <div className={classNames("navbar__container")}>
-          <div className={classNames("navbar__brand")}>
+        <div className="navbar__container">
+          <div className="navbar__brand">
             <Link href="#start">Jagodowa Harmonia Zdrowia</Link>
           </div>
           <button
@@ -60,21 +47,21 @@ useEffect(() => {
             aria-label={isMenuOpen ? "Zamknij menu" : "Otwórz menu"}
             aria-expanded={isMenuOpen}
             aria-controls="navbar-mobile-panel"
-            className={classNames("navbar__toggle")}
+            className="navbar__toggle"
             onClick={() => setIsMenuOpen((prev) => !prev)}
           >
             {isMenuOpen ? <IoClose /> : <RxHamburgerMenu />}
           </button>
-          <nav className={classNames("navbar__navigation")} aria-label="Główne">
-            <ul className={classNames("navbar__list")}>
+          <nav className="navbar__navigation" aria-label="Główne">
+            <ul className="navbar__list">
               {navLinks.map((link) => (
-                <li key={link.href} className={classNames("navbar__item")}>
+                <li key={link.href} className="navbar__item">
                   <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <div className={classNames("navbar__social")} aria-label="Media społecznościowe">
+          <div className="navbar__social" aria-label="Media społecznościowe">
             {socialLinks.map((link) => (
               <Link
                 key={link.key}
@@ -82,7 +69,7 @@ useEffect(() => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.label}
-                className={classNames(`navbar__social-link navbar__social-link--${link.key}`)}
+                className={`navbar__social-link navbar__social-link--${link.key}`}
               >
                 <link.Icon aria-hidden />
               </Link>
@@ -93,14 +80,12 @@ useEffect(() => {
 
       <nav
         id="navbar-mobile-panel"
-        className={classNames("navbar__mobile-panel", {
-          "navbar__mobile-panel--open": isMenuOpen,
-        })}
+        className={`navbar__mobile-panel${isMenuOpen ? " navbar__mobile-panel--open" : ""}`}
         aria-label="Menu mobilne"
       >
-        <ul className={classNames("navbar__mobile-list")}>
+        <ul className="navbar__mobile-list">
           {navLinks.map((link) => (
-            <li key={link.href} className={classNames("navbar__mobile-item")}>
+            <li key={link.href} className="navbar__mobile-item">
               <Link
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
@@ -110,7 +95,7 @@ useEffect(() => {
             </li>
           ))}
         </ul>
-        <div className={classNames("navbar__mobile-social")}>
+        <div className="navbar__mobile-social">
           {socialLinks.map((link) => (
             <Link
               key={link.key}
@@ -118,7 +103,7 @@ useEffect(() => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className={classNames(`navbar__mobile-social-link navbar__mobile-social-link--${link.key}`)}
+              className={`navbar__mobile-social-link navbar__mobile-social-link--${link.key}`}
               onClick={() => setIsMenuOpen(false)}
             >
               <link.Icon aria-hidden />
