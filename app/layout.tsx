@@ -13,7 +13,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jagodowa-harmonia.pl"),
   title: {
-    default: "Jagodowa Harmonia | Dietetyczka kliniczna online",
+    default: "Jagodowa Harmonia | Dietetyczka online",
     template: "%s | Jagodowa Harmonia",
   },
   description:
