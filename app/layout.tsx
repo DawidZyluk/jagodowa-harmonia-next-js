@@ -134,6 +134,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="pl">
       <head>
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZS76T7RG4S"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZS76T7RG4S');
+    `}
+        </Script>
+        <Script
           id="mailerlite-universal"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -147,6 +159,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
       </head>
+
       <body className={poppins.variable}>
         <Script id="org-schema" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(organizationJsonLd)}
