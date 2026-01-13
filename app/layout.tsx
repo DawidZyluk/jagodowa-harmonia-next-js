@@ -146,6 +146,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     `}
         </Script>
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GR4QYB63ZG"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GR4QYB63ZG');
+    `}
+        </Script>
+        <Script
           id="mailerlite-universal"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
